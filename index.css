@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --red: #ff8080;
+    --white: #e8e8e8;
+    --pewter: #fafafa;
+    --blue: #54627B;
+    --font: 'Roboto Condensed', sans-serif;
+}
+
+.header {
+    background-color: var(--blue);
+    color: var(--white);
+    font-family: var(--font);
+    width: auto;
+    position: sticky;
+    padding: 3px;
+}
+
+.header a {
+    text-decoration: none;
+    color: var(--red);
+    cursor: pointer;
+}
+
+.header a:hover {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.wrapper1 {
+    display: grid;
+    grid-row-gap: 1em;
+    justify-content: center;
+    margin: 10px;
+    margin: 20vh 0 0 0;
+}
+
+.row1 {
+    display: flex;
+    justify-content: left;
+    align-content: center;
+    width: 40vw;
+}
+
+
+.row1 h1 {
+    display: inline-flex;
+    font-size: 4vh;
+    font-weight: 900;
+    font-family: var(--font);
+    color: var(--blue);
+}
+
+
+.row2 {
+    font-family: var(--font);
+    padding: 5px 0 5px 0;
+}
+
+
+
+.row2 input {
+    height: 25px;
+    min-width: 10vw;
+    border: 1px solid var(--white);
+    border-radius: 5px;
+    background-color: transparent;
+    outline: none;
+    resize: none;
+    font-family: var(--font);
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.row2 input #name {
+    color: blue;
+}
+
+.row2 form {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    font-weight: 600;
+}
+
+.row2 div {
+    margin: 0 10px 0 0;
+}
+
+.row2 button {
+    width: 7em;
+    height: 2em;
+    font-family: var(--font);
+    font-weight: 600;
+    border: transparent;
+    border-radius: 3px;
+    background-color: var(--blue);
+    color: var(--pewter);
+}
+
+
+.row3 {
+    display: flex;
+    margin: 30px 0 0 0;
+}
+
+.wrapper2 {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.boxes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0 10px 0 0;
+    font-family: var(--font);
+    font-weight: 600;
+    box-shadow: 0px 0px 1px 1px rgba(219, 219, 219, 1);
+}
+
+.boxes p {
+    font-size: 15px;
+}
+
+.boxes h4 {
+    font-size: larger;
+}
+
+.boxes * {
+    margin: 5px;
+    text-transform: capitalize;
+}
+
+
+.boxes button {
+    font-family: var(--font);
+    font-weight: 600;
+    background-color: var(--white);
+    text-decoration: none;
+    border: transparent;
+    border-radius: 5px;
+    padding: 3px;
+    transition: 0.6s;
+    color: black;
+}
+
+.boxes button:hover {
+    background-color: #ff8080;
+}
+
+@media screen and (max-width: 600px) {
+    .row1 {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+
+    .row1 h1 {
+        font-size: 5vh;
+    }
+
+    .row2 form {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        font-size: larger;
+    }
+
+    .wrapper1 {
+        justify-content: center;
+        margin: 10px;
+        margin: 30vh 0 0 0;
+    }
+
+    .row2 button {
+        font-size: medium;
+    }
+
+}
+
+
+@media screen and (max-width: 420px) {
+
+    .row1 {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        width: 100vw;
+    }
+
+    .row2 input {
+        width: 50vw;
+    }
+}
