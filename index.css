@@ -8,23 +8,25 @@
     --red: #ff8080;
     --white: #e8e8e8;
     --pewter: #fafafa;
-    --blue: #54627B;
+    --blue: #4b9cda;
     --font: 'Roboto Condensed', sans-serif;
 }
 
 .header {
-    background-color: var(--blue);
-    color: var(--white);
+    background-color: var(--red);
+    color: black;
     font-family: var(--font);
     width: auto;
     position: sticky;
     padding: 3px;
+    font-weight: 700;
 }
 
 .header a {
     text-decoration: none;
-    color: var(--red);
+    color: #7b2121;
     cursor: pointer;
+    transition: 0.5s ease-in-out;
 }
 
 .header a:hover {
@@ -34,23 +36,22 @@
 
 .wrapper1 {
     display: grid;
+    width: 60vw;
     grid-row-gap: 1em;
     justify-content: center;
-    margin: 10px;
     margin: 20vh 0 0 0;
 }
 
 .row1 {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-content: center;
-    width: 40vw;
+    width: 50vw;
 }
 
 
 .row1 h1 {
-    display: inline-flex;
-    font-size: 4vh;
+    font-size: 3rem;
     font-weight: 900;
     font-family: var(--font);
     color: var(--blue);
@@ -58,6 +59,8 @@
 
 
 .row2 {
+    display: flex;
+    width: 50vw;
     font-family: var(--font);
     padding: 5px 0 5px 0;
 }
@@ -82,8 +85,9 @@
 }
 
 .row2 form {
+    width: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
@@ -111,9 +115,17 @@
     margin: 30px 0 0 0;
 }
 
+.wrapper1{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .wrapper2 {
     display: grid;
     grid-gap: 10px;
+    width: 50vw;
     grid-template-columns: repeat(4, 1fr);
 }
 
@@ -121,7 +133,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     flex-wrap: wrap;
+    min-width: 10vw;
     border-radius: 5px;
     padding: 10px;
     margin: 0 10px 0 0;
@@ -132,10 +146,13 @@
 
 .boxes p {
     font-size: 15px;
+    text-align: center;
 }
 
 .boxes h4 {
     font-size: larger;
+    color: var(--red);
+    text-align: center;
 }
 
 .boxes * {
@@ -160,7 +177,26 @@
     background-color: #ff8080;
 }
 
+@media screen and (max-width: 1200px) {
+
+    .wrapper2 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+@media screen and (max-width: 1012px) {
+
+    .wrapper2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
 @media screen and (max-width: 600px) {
+    
     .row1 {
         display: flex;
         justify-content: center;
@@ -185,6 +221,13 @@
         justify-content: center;
         margin: 10px;
         margin: 30vh 0 0 0;
+    }
+
+    .wrapper2 {
+        display: grid;
+        grid-gap: 10px;
+        width: 50vw;
+        grid-template-columns: repeat(1, 1fr);
     }
 
     .row2 button {
